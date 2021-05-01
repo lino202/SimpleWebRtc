@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+    signaling:
+        build:
+            context: ./signaling
+        volumes:
+          - ./signaling:/usr/src/app
+        ports:
+            - "9090:9090"
+    web:
+        restart: always
+        build:
+            context: ./web
+        volumes:
+          - ./web:/usr/share/nginx/html
+        ports:
+            - "80:80"
