@@ -3,8 +3,8 @@ services:
     signaling:
         build:
             context: ./signaling
-        volumes:
-          - ./signaling:/usr/src/app
+#        volumes:
+#            - ./signaling:/usr/src/app
         ports:
             - "9090:9090"
     web:
