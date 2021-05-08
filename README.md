@@ -26,11 +26,11 @@ A WebRTC system which contains implementations of:
   You should change the address for the signaling server in the following places:
 
   ```js
-  #SimpleWebRtc/webSignaling/web/js/client.js
+  //SimpleWebRtc/webSignaling/web/js/client.js
   const wsAddress = 'ws://192.168.0.20:9090'   //CHANGE!!
   ```
   ```js
-  #SimpleWebRtc/mobile/WebRtcMobile/src/App.js
+  //SimpleWebRtc/mobile/WebRtcMobile/src/App.js
   const wsAddress = 'ws://192.168.0.20:9090'   //CHANGE!!
   ```
 
@@ -53,7 +53,7 @@ A WebRTC system which contains implementations of:
   cd ../WebRtcMobile
   yarn install
   ```
-  You should be able to build succesfully the application and if you connect your device (check that your phone is correctly connected with ```bash adb devices```) and try to load the app by firstly starting the metro server
+  You should be able to build succesfully the application and if you connect your device (check that your phone is correctly connected with ``` adb devices```) and try to load the app by firstly starting the metro server
 
   ```bash
   yarn start
@@ -65,17 +65,22 @@ A WebRTC system which contains implementations of:
   yarn android
   ```
 
+Try to call your web user!! 
 
+## Usage and clarifications
 
-## Usage
-Only peer to peer comunications are suppported. As this is a proof of concept just communcation inside the LAN can be achieved.
+Only peer to peer comunications are suppported. As this is a proof of concept just communcation inside the LAN can be achieved. For connecting with another computer inside the LAN using http you should enable unsecure contexts on Firefox or Chrome. 
 
 Signaling server runs in the localhost:9090 and web client in localhost:80. 
+
+Photos taken in the mobile app would be saved in the folder /Pictures inside the smartphone. 
+
+Permissions have to be granted to the mobile app by the user for using camera, microphone and storage. Usually if the photos are not being saved is because the permission has not been granted yet. Then, you should close the app go to your settings, Apps, search for the WebRtcMobile app and under permissions enable storage.
 
 
 
 ## Related projects
 
-The adjusted [react-native-webrtc](https://github.com/lino202/react-native-webrtc) in which this application is based on, allows extra features as takePicture, setZoom and switch Flashlight.
+The adjusted [react-native-webrtc](https://github.com/lino202/react-native-webrtc) in which this application is based on, allows extra features as takePicture, setZoom and switch Flashlight. This work is based on information found in forums and issues discussions of the react-native-webrtc original module.
 
 
