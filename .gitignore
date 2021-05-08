@@ -1,6 +1,7 @@
 #Personal
 native_modules/
 ReadMeMaxi.txt
+.vscode/
 
 #Recommended gitignore for react native projects
 # OSX

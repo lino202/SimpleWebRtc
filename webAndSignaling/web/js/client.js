@@ -2,7 +2,7 @@
 var name = null; 
 var remoteName = null;
 const configuration = {"iceServers": [{ "url": "stun:stun2.1.google.com:19302" }]};  //using Google public stun server 
-const wsAddress = 'ws://192.168.0.20:9090'
+const wsAddress = 'ws://192.168.0.20:9090'     //CHANGE!!
  
 var loginPage = document.querySelector('#loginPage'); 
 var usernameInput = document.querySelector('#usernameInput'); 

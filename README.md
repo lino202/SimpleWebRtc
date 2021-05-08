@@ -6,7 +6,7 @@ A WebRTC system which contains implementations of:
 - Web client
 - Android React Native application which wraps an specific fork of react-native-webrtc
 - Support Local Stream takePicture, zoom and flashlight for mobile client
-- Signaling and web server are contained in docker compose
+- Signaling and web server are implemented using docker-compose
 
 ## Dependecies
 
@@ -17,19 +17,54 @@ A WebRTC system which contains implementations of:
 
 ## Installation
 
-  - Clone the repo
-  - Change websocket's address in web and mobile apps
-  - Launch docker-compose inside /webAndSignaling folder
-  - Check (http://localhost:80)
-  - Install mobile app and its dependecies with npm install and manual link the right react-native-webrtc module (https://github.com/lino202/react-native-webrtc), which you need to clone and set as the module to use.
+  ### Web client and signaling server
+
+  ```bash
+  git clone https://github.com/lino202/SimpleWebRtc
+  ```
+
+  You should change the address for the signaling server in the following places:
+
+  ```js
+  #./webSignaling/web/js/client.js
+  const wsAddress = 'ws://192.168.0.20:9090'   //CHANGE!!
+  ```
+  ```js
+  #./Mobile/WebRtcMobile/src/App.js
+  const wsAddress = 'ws://192.168.0.20:9090'   //CHANGE!!
+  ```
+
+
+  Then, run the application
+
+  ```bash
+  cd SimpleWebRtc/webAndSignaling
+  docker-compose up
+  ```
+  Check http://localhost:80
+
+  ### Android Client
+
+  ```bash
+  cd Mobile
+  mkdir native_modules & cd native_modules
+  git clone  https://github.com/lino202/react-native-webrtc
+  cd ../WebRtcMobile
+  yarn install
+  ```
+  You should be able to build succesfully the application and if you connect your device (check that your phone is correctly connected with ```bash adb devices```) and try to load the app:
+
+  ```bash
+  yarn start
+  yarn run-android
+  ```
+
 
 
 ## Usage
-Only peer to peer comunications are suppported. As this is a POC just within LAN communication can be achieved.
+Only peer to peer comunications are suppported. As this is a proof of concept just communcation inside the LAN can be achieved.
 
 Signaling server runs in the localhost:9090 and web client in localhost:80. 
-
-Mobile phone has to be inside the same LAN as localhost and its websocket url must be changed to the corrrect one
 
 
 

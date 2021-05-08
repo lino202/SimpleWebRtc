@@ -4,7 +4,7 @@ import Slider from '@react-native-community/slider'
 import {RTCPeerConnection, RTCView, mediaDevices,RTCSessionDescription, RTCIceCandidate} from 'react-native-webrtc';
 
 const configuration = {iceServers: [{ "url": "stun:stun2.1.google.com:19302" }]};
-const wsAddress  = 'ws://192.168.0.20:9090'
+const wsAddress  = 'ws://192.168.0.20:9090'    //CHANGE!!
 
 export default class App extends React.Component{
   constructor(){
