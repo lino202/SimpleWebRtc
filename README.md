@@ -30,7 +30,7 @@ A WebRTC system which contains implementations of:
   const wsAddress = 'ws://192.168.0.20:9090'   //CHANGE!!
   ```
   ```js
-  #./Mobile/WebRtcMobile/src/App.js
+  #./mobile/WebRtcMobile/src/App.js
   const wsAddress = 'ws://192.168.0.20:9090'   //CHANGE!!
   ```
 
@@ -46,7 +46,7 @@ A WebRTC system which contains implementations of:
   ### Android Client
 
   ```bash
-  cd Mobile
+  cd mobile
   mkdir native_modules & cd native_modules
   git clone  https://github.com/lino202/react-native-webrtc
   cd ../WebRtcMobile
