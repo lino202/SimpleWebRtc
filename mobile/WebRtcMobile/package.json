@@ -12,7 +12,7 @@
     "@react-native-community/slider": "^3.0.3",
     "react": "16.9.0",
     "react-native": "^0.61.5",
-    "react-native-webrtc": "../native_modules/react-native-webrtc-cam"
+    "react-native-webrtc": "../native_modules/react-native-webrtc"
   },
   "devDependencies": {
     "@babel/core": "7.8.3",

@@ -26,11 +26,11 @@ A WebRTC system which contains implementations of:
   You should change the address for the signaling server in the following places:
 
   ```js
-  #./webSignaling/web/js/client.js
+  #SimpleWebRtc/webSignaling/web/js/client.js
   const wsAddress = 'ws://192.168.0.20:9090'   //CHANGE!!
   ```
   ```js
-  #./mobile/WebRtcMobile/src/App.js
+  #SimpleWebRtc/mobile/WebRtcMobile/src/App.js
   const wsAddress = 'ws://192.168.0.20:9090'   //CHANGE!!
   ```
 
@@ -46,17 +46,23 @@ A WebRTC system which contains implementations of:
   ### Android Client
 
   ```bash
-  cd mobile
-  mkdir native_modules & cd native_modules
+  cd SimpleWebRtc/mobile
+  mkdir native_modules 
+  cd native_modules
   git clone  https://github.com/lino202/react-native-webrtc
   cd ../WebRtcMobile
   yarn install
   ```
-  You should be able to build succesfully the application and if you connect your device (check that your phone is correctly connected with ```bash adb devices```) and try to load the app:
+  You should be able to build succesfully the application and if you connect your device (check that your phone is correctly connected with ```bash adb devices```) and try to load the app by firstly starting the metro server
 
   ```bash
   yarn start
-  yarn run-android
+  ```
+
+
+  Open a new terminal in path/SimpleWebRtc/mobile/webRtcMobile and build and load the app 
+  ```bash
+  yarn android
   ```
 
 
