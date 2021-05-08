@@ -17,12 +17,11 @@ A WebRTC system which contains implementations of:
 
 ## Installation
 
-  ### Web client and signaling server
-
   ```bash
   git clone https://github.com/lino202/SimpleWebRtc
   ```
 
+  ### Web client and signaling server
   You should change the address for the signaling server in the following places:
 
   ```js
@@ -53,14 +52,14 @@ A WebRTC system which contains implementations of:
   cd ../WebRtcMobile
   yarn install
   ```
-  You should be able to build succesfully the application and if you connect your device (check that your phone is correctly connected with ``` adb devices```) and try to load the app by firstly starting the metro server
+  You should be able to build succesfully the application and if you connect your device (check that your phone is correctly connected with ```adb devices```) and try to load the app by firstly starting the metro server
 
   ```bash
   yarn start
   ```
 
+  Open a new terminal in path/to/project/SimpleWebRtc/mobile/webRtcMobile and build and load the app
 
-  Open a new terminal in path/SimpleWebRtc/mobile/webRtcMobile and build and load the app 
   ```bash
   yarn android
   ```
@@ -77,6 +76,9 @@ Photos taken in the mobile app would be saved in the folder /Pictures inside the
 
 Permissions have to be granted to the mobile app by the user for using camera, microphone and storage. Usually if the photos are not being saved is because the permission has not been granted yet. Then, you should close the app go to your settings, Apps, search for the WebRtcMobile app and under permissions enable storage.
 
+Currently only the old camera API is supported. Future work could be implementing features for Camera2 API
+
+Picture resolution is lower than the normal camera application as it takes the picture from the webrtc stream.
 
 
 ## Related projects
